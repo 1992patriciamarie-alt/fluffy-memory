@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Multi-timezone Digital Clock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Multi-timezone Digital Clock</h1>
+    <p class="subtitle">Add multiple clocks and watch current time around the world.</p>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Add time zone">
+      <label for="tz-select">Time zone</label>
+      <select id="tz-select" aria-label="Select a time zone"></select>
+      <button id="add-btn">Add</button>
+      <button id="add-local">Add Local</button>
+    </section>
+
+    <section id="clocks" class="clocks" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>Built with plain HTML, CSS and JavaScript. Open this file in any modern browser.</p>
+  </footer>
+
+  <script src="clock.js" defer></script>
+</body>
+</html>

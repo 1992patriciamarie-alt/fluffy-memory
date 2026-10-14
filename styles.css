@@ -1,0 +1,25 @@
+/* styles.css - simple responsive layout for clocks */
+:root{
+  --bg:#0f1720;
+  --card:#0b1220;
+  --accent:#2dd4bf;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; margin:0; background:linear-gradient(180deg,#071126 0%, #051022 100%); color:#e6eef6; min-height:100vh; padding:24px}
+header{margin-bottom:18px}
+h1{margin:0;font-size:1.4rem}
+.subtitle{margin:6px 0 0;color:var(--muted)}
+.controls{display:flex;gap:8px;align-items:center;margin-bottom:18px}
+select{padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:var(--glass);color:inherit}
+button{background:var(--accent);border:none;color:#032; padding:8px 10px;border-radius:6px;cursor:pointer}
+button:active{transform:translateY(1px)}
+.clocks{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.clock-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:flex;flex-direction:column;gap:6px}
+.clock-header{display:flex;justify-content:space-between;align-items:center}
+.tz-name{font-weight:600}
+.remove-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:4px 6px;border-radius:6px;cursor:pointer}
+.time{font-size:1.6rem;font-variant-numeric:tabular-nums}
+.date{color:var(--muted);font-size:0.9rem}
+@media (max-width:420px){.controls{flex-direction:column;align-items:stretch}button{width:100%}}
